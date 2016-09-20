@@ -21,7 +21,7 @@ SCRIPT_LINES__ = {} unless defined? SCRIPT_LINES__
 
 module Rcov
   # TODO: Move to Ruby 1.8.6 Backport module
-  unless RUBY_VERSION =~ /1.9/  
+  if RUBY_VERSION =~ /^1.8/
     class ::String
       def lines
         map

@@ -20,14 +20,6 @@ require 'rcov/call_site_analyzer'
 SCRIPT_LINES__ = {} unless defined? SCRIPT_LINES__
 
 module Rcov
-  # TODO: Move to Ruby 1.8.6 Backport module
-  if RUBY_VERSION =~ /^1.8/
-    class ::String
-      def lines
-        map
-      end
-    end
-  end
 
   autoload :RCOV__, "rcov/lowlevel.rb"
 end
